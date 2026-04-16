@@ -206,7 +206,7 @@ const App = () => {
         '/img/portfolio1_5.jpg',
         '/img/portfolio1_6.jpg',
         '/img/portfolio1_7.jpg',
-        '/img/portfolio1_8.jpg'
+        '/img/portfolio1_8.jpg',
         '/img/portfolio1_9.jpg'
       ],
       color: 'bg-purple-50'

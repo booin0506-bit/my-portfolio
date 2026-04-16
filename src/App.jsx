@@ -197,8 +197,17 @@ const App = () => {
       category: 'UI/UX Design · Personal',
       description: '사용자의 일상 속 불편함을 해결하기 위해 새롭게 기획하고 구상 중인 모바일 앱 서비스 화면입니다.',
       tools: ['Figma', 'Protopie'],
-      imageUrl: '/api/placeholder/800/600',
-      detailImages: ['/api/placeholder/1200/800', '/api/placeholder/1200/800'],
+      imageUrl: '/my-portfolio/img/portfolio1_1.jpg',
+      detailImages: [
+        '/my-portfolio/img/portfolio1_1.jpg',
+        '/my-portfolio/img/portfolio1_2.jpg',
+        '/my-portfolio/img/portfolio1_3.jpg',
+        '/my-portfolio/img/portfolio1_4.jpg',
+        '/my-portfolio/img/portfolio1_5.jpg',
+        '/my-portfolio/img/portfolio1_6.jpg',
+        '/my-portfolio/img/portfolio1_7.jpg',
+        '/my-portfolio/img/portfolio1_8.jpg'
+      ],
       color: 'bg-purple-50'
     },
     {

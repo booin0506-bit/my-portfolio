@@ -1,6 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowUpRight, Mail, Phone, MapPin, User, Heart, Coffee, Users, Target, MessageCircle, PenTool, Layout, Lightbulb, X, ArrowLeft, Image as ImageIcon } from 'lucide-react';
-
+import port1_1 from './assets/img/portfolio1_1.jpg';
+import port1_2 from './assets/img/portfolio1_2.jpg';
+import port1_3 from './assets/img/portfolio1_3.jpg';
+import port1_4 from './assets/img/portfolio1_4.jpg';
+import port1_5 from './assets/img/portfolio1_5.jpg';
+import port1_6 from './assets/img/portfolio1_6.jpg';
+import port1_7 from './assets/img/portfolio1_7.jpg';
+import port1_8 from './assets/img/portfolio1_8.jpg';
+import port1_9 from './assets/img/portfolio1_9.jpg';
 // 스크롤 페이드인 애니메이션 컴포넌트 추가
 const FadeInOnScroll = ({ children, className = "", delay = 0 }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -197,18 +205,18 @@ const App = () => {
       category: 'UI/UX Design · Personal',
       description: '사용자의 일상 속 불편함을 해결하기 위해 새롭게 기획하고 구상 중인 모바일 앱 서비스 화면입니다.',
       tools: ['Figma', 'Protopie'],
-      // 맨 앞에 점(.)을 추가하여 상대경로로 변경!
-      imageUrl: './img/portfolio1_1.jpg',
+      // ✅ 따옴표(문자열)를 지우고, 위에서 import한 변수 이름을 그대로 적어줍니다.
+      imageUrl: port1_1,
       detailImages: [
-        './img/portfolio1_1.jpg',
-        './img/portfolio1_2.jpg',
-        './img/portfolio1_3.jpg',
-        './img/portfolio1_4.jpg',
-        './img/portfolio1_5.jpg',
-        './img/portfolio1_6.jpg',
-        './img/portfolio1_7.jpg',
-        './img/portfolio1_8.jpg',
-        './img/portfolio1_9.jpg'
+        port1_1,
+        port1_2,
+        port1_3,
+        port1_4,
+        port1_5,
+        port1_6,
+        port1_7,
+        port1_8,
+        port1_9
       ],
       color: 'bg-purple-50'
     },

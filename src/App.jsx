@@ -9,6 +9,25 @@ import port1_6 from './assets/img/portfolio1_6.jpg';
 import port1_7 from './assets/img/portfolio1_7.jpg';
 import port1_8 from './assets/img/portfolio1_8.jpg';
 import port1_9 from './assets/img/portfolio1_9.jpg';
+
+import port2_thumb from './assets/img/portfolio2_thumnail.png';
+import port2_1 from './assets/img/portfolio2_01.jpg';
+import port2_2 from './assets/img/portfolio2_02.jpg';
+import port2_3 from './assets/img/portfolio2_03.jpg';
+import port2_4 from './assets/img/portfolio2_04.jpg';
+import port2_5 from './assets/img/portfolio2_05.jpg';
+import port2_6 from './assets/img/portfolio2_06.jpg';
+import port2_7 from './assets/img/portfolio2_07.jpg';
+
+import port3_thumb from './assets/img/portfolio3_thumnail.png';
+import port3_1 from './assets/img/portfolio3_01.jpg';
+import port3_2 from './assets/img/portfolio3_02.jpg';
+import port3_3 from './assets/img/portfolio3_03.jpg';
+
+import port4_1 from './assets/img/portfolio4_01.jpg';
+import port4_2 from './assets/img/portfolio4_02.jpg';
+import port4_3 from './assets/img/portfolio4_03.gif';
+import port4_4 from './assets/img/portfolio4_04.gif';
 // 스크롤 페이드인 애니메이션 컴포넌트 추가
 const FadeInOnScroll = ({ children, className = "", delay = 0 }) => {
   const [isVisible, setIsVisible] = useState(false);

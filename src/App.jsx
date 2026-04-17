@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowUpRight, Mail, Phone, MapPin, User, Heart, Coffee, Users, Target, MessageCircle, PenTool, Layout, Lightbulb, X, ArrowLeft, Image as ImageIcon } from 'lucide-react';
+
 import port1_1 from './assets/img/portfolio1_1.jpg';
 import port1_2 from './assets/img/portfolio1_2.jpg';
 import port1_3 from './assets/img/portfolio1_3.jpg';
@@ -38,11 +39,10 @@ const FadeInOnScroll = ({ children, className = "", delay = 0 }) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          // 한 번 나타난 후에는 다시 애니메이션이 실행되지 않도록 관찰 해제
           if (domRef.current) observer.unobserve(domRef.current);
         }
       });
-    }, { threshold: 0.15 }); // 요소가 15% 정도 보일 때 트리거
+    }, { threshold: 0.15 });
 
     const currentRef = domRef.current;
     if (currentRef) observer.observe(currentRef);
@@ -73,21 +73,16 @@ const CoverLetter = ({ onBack }) => {
 
   return (
     <div className="min-h-screen bg-[#fafafa] text-gray-900 font-sans pb-32 animate-fade-in relative">
-      
-      {/* 배경 커버 이미지 (차분한 서재 느낌) */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img 
           src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072&auto=format&fit=crop" 
           alt="Cover Letter Background" 
           className="w-full h-full object-cover"
         />
-        {/* 흰색 오버레이와 블러 효과로 가독성 확보 */}
         <div className="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
       </div>
 
-      {/* 컨텐츠 영역 (배경 위에 위치하도록 z-10 설정) */}
       <div className="relative z-10">
-        {/* 자기소개서 상단 헤더 */}
         <header className="sticky top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 py-4 shadow-sm">
           <div className="max-w-4xl mx-auto px-6 flex items-center justify-between">
             <button 
@@ -112,8 +107,6 @@ const CoverLetter = ({ onBack }) => {
           </div>
 
           <div className="space-y-20 bg-white/95 backdrop-blur-sm p-8 md:p-12 rounded-[2rem] shadow-lg border border-gray-100">
-            
-            {/* 1. 가치관과 일의 태도 */}
             <FadeInOnScroll>
               <section>
                 <div className="flex items-center gap-4 mb-6 border-b border-gray-100 pb-4">
@@ -126,31 +119,25 @@ const CoverLetter = ({ onBack }) => {
               </section>
             </FadeInOnScroll>
 
-            {/* 2. 강점과 단점 */}
             <FadeInOnScroll>
               <section>
                 <div className="flex items-center gap-4 mb-6 border-b border-gray-100 pb-4">
                   <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center font-bold text-lg">02</div>
                   <h2 className="text-2xl font-bold text-gray-800">강점과 단점</h2>
                 </div>
-                
-                {/* 시각화 이미지 삽입 영역 */}
                 <div className="w-full bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 flex flex-col items-center justify-center relative aspect-video mb-8 shadow-sm">
-                  {/* 아래 src="..." 안에 원하는 이미지의 이름이나 주소를 넣어주시면 됩니다! */}
                   <img 
                     src="/api/placeholder/1200/600" 
                     alt="강점과 단점 시각화 데이터" 
                     className="w-full h-full object-cover" 
                   />
                 </div>
-
                 <p className="text-lg leading-relaxed text-gray-600 font-medium break-keep">
                   저의 가장 큰 강점은 '사용자와 동료를 향한 배려' 그리고 '원활한 커뮤니케이션 능력'입니다. 디자인 결과물이 어떤 맥락에서 사용될지 꼼꼼히 분석하여 직관적인 경험을 설계합니다. 반면, [단점 입력: 예 - 너무 디테일에 집착하여 가끔 시간이 지체될 때가 있습니다.]라는 단점이 있습니다. 하지만 이를 극복하기 위해 [극복 노력 입력: 예 - 작업 전 명확한 타임라인을 설정하고 우선순위를 시각화하여 일정을 관리하는] 등 꾸준한 노력을 기울이고 있습니다.
                 </p>
               </section>
             </FadeInOnScroll>
 
-            {/* 3. 지원계기 */}
             <FadeInOnScroll>
               <section>
                 <div className="flex items-center gap-4 mb-6 border-b border-gray-100 pb-4">
@@ -163,7 +150,6 @@ const CoverLetter = ({ onBack }) => {
               </section>
             </FadeInOnScroll>
 
-            {/* 4. 지원포부 */}
             <FadeInOnScroll>
               <section>
                 <div className="flex items-center gap-4 mb-6 border-b border-gray-100 pb-4">
@@ -175,7 +161,6 @@ const CoverLetter = ({ onBack }) => {
                 </p>
               </section>
             </FadeInOnScroll>
-
           </div>
         </main>
       </div>
@@ -185,7 +170,7 @@ const CoverLetter = ({ onBack }) => {
 
 // 메인 앱 컴포넌트
 const App = () => {
-  const [currentView, setCurrentView] = useState('main'); // 'main' 또는 'cover-letter'
+  const [currentView, setCurrentView] = useState('main');
   const [isScrolled, setIsScrolled] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -197,7 +182,6 @@ const App = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // 모달이 열렸을 때 배경 스크롤 방지
   useEffect(() => {
     if (selectedProject) {
       document.body.style.overflow = 'hidden';
@@ -207,7 +191,6 @@ const App = () => {
     return () => { document.body.style.overflow = 'unset'; };
   }, [selectedProject]);
 
-  // 페이지 뷰 전환 핸들러
   const handleNavigateToCoverLetter = () => {
     setCurrentView('cover-letter');
   };
@@ -224,18 +207,10 @@ const App = () => {
       category: 'UI/UX Design · Personal',
       description: '사용자의 일상 속 불편함을 해결하기 위해 새롭게 기획하고 구상 중인 모바일 앱 서비스 화면입니다.',
       tools: ['Figma', 'Protopie'],
-      // ✅ 따옴표(문자열)를 지우고, 위에서 import한 변수 이름을 그대로 적어줍니다.
       imageUrl: port1_1,
       detailImages: [
-        port1_1,
-        port1_2,
-        port1_3,
-        port1_4,
-        port1_5,
-        port1_6,
-        port1_7,
-        port1_8,
-        port1_9
+        port1_1, port1_2, port1_3, port1_4, 
+        port1_5, port1_6, port1_7, port1_8, port1_9
       ],
       color: 'bg-purple-50'
     },
@@ -245,8 +220,12 @@ const App = () => {
       category: 'UI/UX Design · Web Publishing',
       description: '밀키트 스타트업 푸드어셈블의 전반적인 브랜딩 및 웹/앱 디자인 리뉴얼을 주도하고 웹페이지를 재구성했습니다.',
       tools: ['Photoshop', 'Cafe24'],
-      imageUrl: '/api/placeholder/800/600',
-      detailImages: ['/api/placeholder/1200/800', '/api/placeholder/1200/1200'],
+      // ✅ portfolio2 데이터 적용
+      imageUrl: port2_thumb,
+      detailImages: [
+        port2_1, port2_2, port2_3, port2_4, 
+        port2_5, port2_6, port2_7
+      ],
       color: 'bg-orange-50'
     },
     {
@@ -255,8 +234,11 @@ const App = () => {
       category: 'Web Design · Promotion',
       description: '고객 참여를 유도하고 브랜드 가치를 전달하는 다양한 이벤트 및 프로모션 배너를 기획하고 디자인했습니다.',
       tools: ['Illustrator', 'Photoshop'],
-      imageUrl: '/api/placeholder/800/600',
-      detailImages: ['/api/placeholder/1200/800'],
+      // ✅ portfolio4 데이터 적용 (썸네일이 따로 없어 01번 이미지를 썸네일로 사용했습니다)
+      imageUrl: port4_1,
+      detailImages: [
+        port4_1, port4_2, port4_3, port4_4
+      ],
       color: 'bg-blue-50'
     },
     {
@@ -265,8 +247,11 @@ const App = () => {
       category: 'Web Design · Content',
       description: '제품의 매력을 돋보이게 하고 구매 전환율을 높일 수 있는 설득력 있는 상세페이지를 디자인했습니다.',
       tools: ['Illustrator', 'Photoshop'],
-      imageUrl: '/api/placeholder/800/600',
-      detailImages: ['/api/placeholder/1200/800'],
+      // ✅ portfolio3 데이터 적용
+      imageUrl: port3_thumb,
+      detailImages: [
+        port3_1, port3_2, port3_3
+      ],
       color: 'bg-green-50'
     }
   ];
@@ -284,16 +269,13 @@ const App = () => {
     soft: ['커뮤니케이션', '꼼꼼함', '자기개발', '스케줄링']
   };
 
-  // 'cover-letter' 상태일 경우 자기소개서 컴포넌트 렌더링
   if (currentView === 'cover-letter') {
     return <CoverLetter onBack={handleNavigateToMain} />;
   }
 
-  // 기본 메인 포트폴리오 렌더링
   return (
     <div className="min-h-screen bg-[#fafafa] text-gray-900 font-sans selection:bg-black selection:text-white pb-20">
       
-      {/* 네비게이션 헤더 */}
       <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md border-b border-gray-200 py-4 shadow-sm' : 'bg-transparent py-6'}`}>
         <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
           <div className="text-xl font-bold tracking-tight cursor-pointer" onClick={() => window.scrollTo(0,0)}>
@@ -309,23 +291,16 @@ const App = () => {
       </header>
 
       <main className="max-w-6xl mx-auto px-6 pt-32">
-        
-        {/* 히어로(Hero) 섹션 */}
         <section className="relative mt-8 md:mt-16 mb-32 animate-fade-in-up rounded-[2.5rem] overflow-hidden shadow-sm border border-gray-100">
-          
-          {/* 1. 배경 이미지 박스 (z-0으로 텍스트 뒤에 배치) */}
           <div className="absolute inset-0 z-0">
-            {/* 요청하신 '어둠 속 건물의 흐릿한 이미지' 적용 (크롭 자동화) */}
             <img 
               src="https://source.unsplash.com/kBzQNk9AgOg/2560x1440" 
               alt="Hero Background" 
               className="w-full h-full object-cover"
             />
-            {/* 텍스트가 잘 보이도록 만들어주는 화이트 그라데이션 필터 */}
             <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/20 backdrop-blur-[2px]"></div>
           </div>
 
-          {/* 2. 텍스트 컨텐츠 (z-10으로 이미지 위로 띄움) */}
           <div className="relative z-10 px-6 py-16 md:px-12 md:py-24 lg:p-24">
             <div className="inline-block px-4 py-2 bg-blue-700 text-blue-50 rounded-full text-sm font-bold mb-6 shadow-sm">
               UI/UX & Web Designer
@@ -334,7 +309,6 @@ const App = () => {
               배려를 디자인하는<br/>
               디자이너 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">변영완</span>입니다.
             </h1>
-            {/* 배경이 생겼으므로 가독성을 위해 text-gray-500에서 text-gray-700으로 진하게 변경 */}
             <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-10 max-w-3xl break-keep font-medium tracking-[0.05em]">
               밀키트 스타트업 '푸드어셈블'에서 2년 8개월간 웹디자이너로 일하며 많은 것을 배우고 경험했습니다.<br className="hidden md:block"/> 
               현재는 프리랜서와 개인작업을 병행하며 단순한 디자인을 넘어 사용자의 맥락을 이해하고,<br className="hidden md:block"/> 
@@ -344,7 +318,6 @@ const App = () => {
               <a href="#work" className="bg-black text-white px-8 py-4 rounded-full font-bold hover:bg-gray-800 transition-transform hover:-translate-y-1 inline-flex items-center gap-2 shadow-md">
                 포트폴리오 보기 <ArrowUpRight size={18} />
               </a>
-              {/* 자기소개서 페이지 이동 버튼 */}
               <button 
                 onClick={handleNavigateToCoverLetter}
                 className="bg-white/80 backdrop-blur-md border border-gray-200 text-gray-800 px-8 py-4 rounded-full font-bold hover:border-gray-300 hover:bg-white transition-colors inline-flex items-center gap-2 cursor-pointer shadow-sm"
@@ -353,10 +326,8 @@ const App = () => {
               </button>
             </div>
           </div>
-
         </section>
 
-        {/* 작품(Work) 그리드 섹션 */}
         <section id="work" className="scroll-mt-32 mb-40">
           <div className="flex flex-col mb-16">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Selected Works</h2>
@@ -405,18 +376,13 @@ const App = () => {
           </div>
         </section>
 
-        {/* About 섹션 (경력 & 업무 방식) */}
         <section id="about" className="scroll-mt-32 mb-40">
           <div className="bg-white rounded-3xl p-8 md:p-16 shadow-sm border border-gray-100">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              
-              {/* 왼쪽: 경력 & 취미 */}
               <FadeInOnScroll>
                 <div>
                   <h2 className="text-3xl font-bold tracking-tight mb-8">Experience</h2>
                   <div className="border-l-2 border-blue-100 ml-2 mb-12 flex flex-col gap-10 py-1">
-                    
-                    {/* 프리랜서 */}
                     <div className="relative pl-6">
                       <div className="absolute w-4 h-4 bg-blue-600 rounded-full -left-[9px] top-1 border-4 border-white"></div>
                       <h3 className="text-xl font-bold mb-1">프리랜서 <span className="text-base font-medium text-gray-400 ml-2">웹디자인 및 유지보수</span></h3>
@@ -426,8 +392,6 @@ const App = () => {
                         <li>브랜드 프로모션 배너 및 제품 상세페이지 제작</li>
                       </ul>
                     </div>
-
-                    {/* 푸드어셈블 */}
                     <div className="relative pl-6">
                       <div className="absolute w-4 h-4 bg-gray-400 rounded-full -left-[9px] top-1 border-4 border-white"></div>
                       <h3 className="text-xl font-bold mb-1">푸드어셈블 <span className="text-base font-medium text-gray-400 ml-2">웹디자이너</span></h3>
@@ -438,7 +402,6 @@ const App = () => {
                         <li>배너 및 상세페이지 디자인</li>
                       </ul>
                     </div>
-
                   </div>
 
                   <h2 className="text-2xl font-bold tracking-tight mb-6">Life & Interests</h2>
@@ -463,7 +426,6 @@ const App = () => {
                 </div>
               </FadeInOnScroll>
 
-              {/* 오른쪽: 일하는 방식 */}
               <FadeInOnScroll delay={200}>
                 <div>
                   <h2 className="text-3xl font-bold tracking-tight mb-8">How I Work</h2>
@@ -480,16 +442,13 @@ const App = () => {
                   </div>
                 </div>
               </FadeInOnScroll>
-
             </div>
           </div>
         </section>
 
-        {/* 스킬 섹션 */}
         <section id="skills" className="scroll-mt-32 mb-32">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-12 text-center">My Skills</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Tools */}
             <FadeInOnScroll delay={0} className="h-full">
               <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 text-center h-full">
                 <div className="w-16 h-16 mx-auto bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mb-6">
@@ -504,7 +463,6 @@ const App = () => {
               </div>
             </FadeInOnScroll>
 
-            {/* Hard Skills */}
             <FadeInOnScroll delay={200} className="h-full">
               <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 text-center h-full">
                 <div className="w-16 h-16 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
@@ -519,7 +477,6 @@ const App = () => {
               </div>
             </FadeInOnScroll>
 
-            {/* Soft Skills */}
             <FadeInOnScroll delay={400} className="h-full">
               <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 text-center h-full">
                 <div className="w-16 h-16 mx-auto bg-green-100 text-green-600 rounded-2xl flex items-center justify-center mb-6">
@@ -535,10 +492,8 @@ const App = () => {
             </FadeInOnScroll>
           </div>
         </section>
-
       </main>
 
-      {/* 푸터 & 연락처 섹션 */}
       <footer id="contact" className="bg-gray-900 text-white mt-20 pt-24 pb-12 rounded-t-[3rem] mx-2 md:mx-6">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-20 gap-8">
@@ -599,7 +554,6 @@ const App = () => {
         </div>
       </footer>
 
-      {/* 포트폴리오 상세 모달 (플로팅 박스) */}
       {selectedProject && (
         <div 
           className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6 bg-black/60 backdrop-blur-sm animate-fade-in"
@@ -607,9 +561,8 @@ const App = () => {
         >
           <div 
             className="bg-white w-full max-w-5xl max-h-[90vh] rounded-[2rem] shadow-2xl flex flex-col overflow-hidden animate-fade-in-up"
-            onClick={(e) => e.stopPropagation()} // 박스 내부 클릭 시 닫히지 않도록 방지
+            onClick={(e) => e.stopPropagation()} 
           >
-            {/* 모달 헤더 (닫기 버튼) */}
             <div className="flex items-center justify-between px-6 md:px-10 py-5 border-b border-gray-100 bg-white/90 backdrop-blur-sm sticky top-0 z-10">
               <h3 className="font-bold text-xl text-gray-800">프로젝트 상세</h3>
               <button 
@@ -620,10 +573,7 @@ const App = () => {
               </button>
             </div>
             
-            {/* 모달 내용 (스크롤 영역) */}
             <div className="overflow-y-auto p-6 md:p-10 custom-scrollbar flex-1">
-              
-              {/* 메타 정보: 작업영역, 제목, 툴, 설명 */}
               <div className="mb-10 text-center md:text-left flex flex-col md:items-start items-center">
                 <div className="text-sm font-bold text-blue-50 mb-4 uppercase tracking-wider px-4 py-1 bg-blue-600 rounded-full inline-block">
                   {selectedProject.category}
@@ -643,7 +593,6 @@ const App = () => {
                 </p>
               </div>
 
-              {/* 포트폴리오 이미지 나열 영역 */}
               <div className="space-y-8 pb-10">
                 <div className={`w-full rounded-3xl overflow-hidden ${selectedProject.color} border border-gray-100 flex items-center justify-center relative min-h-[300px]`}>
                   <img 
@@ -653,7 +602,6 @@ const App = () => {
                   />
                 </div>
                 
-                {/* 프로젝트 데이터의 detailImages 배열을 순회하여 표시 */}
                 {selectedProject.detailImages.map((imgSrc, i) => (
                   <div key={i} className="w-full rounded-3xl overflow-hidden bg-gray-50 border border-gray-100 flex items-center justify-center relative min-h-[400px]">
                     <img 
@@ -661,7 +609,6 @@ const App = () => {
                       alt={`${selectedProject.title} Detail ${i + 1}`} 
                       className="w-full h-auto object-cover relative z-10"
                     />
-                    <span className="absolute text-gray-400 font-bold text-lg opacity-50">상세 포트폴리오 이미지 {i+1}</span>
                   </div>
                 ))}
               </div>

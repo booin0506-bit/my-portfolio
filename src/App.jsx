@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowUpRight, Mail, Phone, MapPin, User, Heart, Coffee, Users, Target, MessageCircle, PenTool, Layout, Lightbulb, X, ArrowLeft, Image as ImageIcon } from 'lucide-react';
 
-import coverLetterImg from './assets/img/Cover_Letter1.png';
+
 
 import port1_1 from './assets/img/portfolio1_1.jpg';
 import port1_2 from './assets/img/portfolio1_2.jpg';
@@ -31,6 +31,10 @@ import port4_1 from './assets/img/portfolio4_01.jpg';
 import port4_2 from './assets/img/portfolio4_02.jpg';
 import port4_3 from './assets/img/portfolio4_03.gif';
 import port4_4 from './assets/img/portfolio4_04.gif';
+
+import coverLetterImg from './assets/img/Cover_Letter1.png';
+
+
 // 스크롤 페이드인 애니메이션 컴포넌트 추가
 const FadeInOnScroll = ({ children, className = "", delay = 0 }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -115,7 +119,8 @@ const CoverLetter = ({ onBack }) => {
                   <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center font-bold text-lg">01</div>
                   <h2 className="text-2xl font-bold text-gray-800">가치관과 일의 태도</h2>
                 </div>
-                <p className="text-lg leading-relaxed text-gray-600 font-medium break-keep">
+                {/* font-medium을 font-normal로 변경 */}
+                <p className="text-lg leading-relaxed text-gray-600 font-normal break-keep">
                   "과정이 즐거워야 결과가 좋다"는 마음가짐으로 업무에 임합니다. 뛰어난 개인의 역량도 중요하지만, 무엇보다 팀워크를 중시하여 팀원들과 의견을 활발하게 교류하는 것을 즐깁니다. 업무 중 예상치 못한 문제가 발생하더라도 좌절하기보다는, 그 상황 안에서 프로젝트를 정상적으로 진행할 수 있는 최선의 방향을 찾기 위해 노력합니다. 혼자만의 생각에 갇히기보다 여러 사람과의 커뮤니케이션을 통해 가장 합리적인 결론을 도출하는 것을 업무의 기본 원칙으로 삼고 있습니다.
                 </p>
               </section>
@@ -129,12 +134,13 @@ const CoverLetter = ({ onBack }) => {
                 </div>
                 <div className="w-full bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 flex flex-col items-center justify-center relative aspect-video mb-8 shadow-sm">
                   <img 
-                    src="/api/placeholder/1200/600" 
+                    src={coverLetterImg} 
                     alt="강점과 단점 시각화 데이터" 
                     className="w-full h-full object-cover" 
                   />
                 </div>
-                <p className="text-lg leading-relaxed text-gray-600 font-medium break-keep">
+                {/* font-medium을 font-normal로 변경 */}
+                <p className="text-lg leading-relaxed text-gray-600 font-normal break-keep">
                   저의 가장 큰 강점은 '사용자와 동료를 향한 배려' 그리고 '원활한 커뮤니케이션 능력'입니다. 디자인 결과물이 어떤 맥락에서 사용될지 꼼꼼히 분석하여 직관적인 경험을 설계합니다. 반면, [단점 입력: 예 - 너무 디테일에 집착하여 가끔 시간이 지체될 때가 있습니다.]라는 단점이 있습니다. 하지만 이를 극복하기 위해 [극복 노력 입력: 예 - 작업 전 명확한 타임라인을 설정하고 우선순위를 시각화하여 일정을 관리하는] 등 꾸준한 노력을 기울이고 있습니다.
                 </p>
               </section>
@@ -146,7 +152,8 @@ const CoverLetter = ({ onBack }) => {
                   <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center font-bold text-lg">03</div>
                   <h2 className="text-2xl font-bold text-gray-800">지원계기</h2>
                 </div>
-                <p className="text-lg leading-relaxed text-gray-600 font-medium break-keep">
+                {/* font-medium을 font-normal로 변경 */}
+                <p className="text-lg leading-relaxed text-gray-600 font-normal break-keep">
                   귀사의 [회사의 비전이나 서비스 장점 입력]에 깊은 인상을 받아 지원하게 되었습니다. 밀키트 스타트업 '푸드어셈블'에서 2년 8개월간 웹/앱 디자인 리뉴얼을 주도하며 브랜드가 성장하는 과정을 함께했습니다. 이 과정에서 얻은 사용자에 대한 깊은 이해와 문제 해결 능력을 이제 귀사의 새로운 프로젝트와 서비스 개선에 쏟고 싶습니다.
                 </p>
               </section>
@@ -158,7 +165,8 @@ const CoverLetter = ({ onBack }) => {
                   <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center font-bold text-lg">04</div>
                   <h2 className="text-2xl font-bold text-gray-800">지원포부</h2>
                 </div>
-                <p className="text-lg leading-relaxed text-gray-600 font-medium break-keep">
+                {/* font-medium을 font-normal로 변경 */}
+                <p className="text-lg leading-relaxed text-gray-600 font-normal break-keep">
                   단순히 보기 좋은 디자인을 넘어, 비즈니스 목표와 사용자의 니즈를 연결하는 든든한 '징검다리' 역할을 하는 디자이너가 되겠습니다. 입사 후 가장 먼저 팀의 업무 프로세스와 도메인 지식을 빠르게 습득하겠습니다. 이후, 제가 가진 커뮤니케이션 역량과 UI/UX 분석력을 바탕으로 팀 내에 긍정적인 에너지를 불어넣고, 귀사의 서비스를 이용하는 고객에게 배려 넘치는 경험을 제공하는 핵심 인재로 성장하겠습니다.
                 </p>
               </section>
@@ -307,7 +315,8 @@ const App = () => {
             <div className="inline-block px-4 py-2 bg-blue-700 text-blue-50 rounded-full text-sm font-bold mb-6 shadow-sm">
               UI/UX & Web Designer
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.15] tracking-[0.05em] mb-8 text-gray-900 break-keep">
+            {/* 폰트 크기를 전체적으로 약 80% 수준으로 축소 (4xl->3xl, 6xl->5xl, 7xl->6xl) */}
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-[1.15] tracking-[0.05em] mb-8 text-gray-900 break-keep">
               배려를 디자인하는<br/>
               디자이너 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">변영완</span>입니다.
             </h1>
@@ -361,7 +370,8 @@ const App = () => {
                       {project.title}
                       <ArrowUpRight size={24} className="opacity-0 -translate-x-2 translate-y-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300 ease-out text-blue-600" />
                     </h3>
-                    <p className="text-gray-600 leading-relaxed mb-4 font-medium break-keep">
+                    {/* font-medium을 font-normal로 변경 */}
+                    <p className="text-gray-600 leading-relaxed mb-4 font-normal break-keep">
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -590,7 +600,8 @@ const App = () => {
                     </span>
                   ))}
                 </div>
-                <p className="text-gray-600 text-lg md:text-xl leading-relaxed font-medium break-keep bg-gray-50 p-6 rounded-2xl border border-gray-100 w-full text-left">
+                {/* font-medium을 font-normal로 변경 */}
+                <p className="text-gray-600 text-lg md:text-xl leading-relaxed font-normal break-keep bg-gray-50 p-6 rounded-2xl border border-gray-100 w-full text-left">
                   {selectedProject.description}
                 </p>
               </div>

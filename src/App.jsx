@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowUpRight, Mail, Phone, MapPin, User, Heart, Coffee, Users, Target, MessageCircle, PenTool, Layout, Lightbulb, X, ArrowLeft, Image as ImageIcon } from 'lucide-react';
 
+import coverLetterImg from './assets/img/Cover_Letter1.png';
+
 import port1_1 from './assets/img/portfolio1_1.jpg';
 import port1_2 from './assets/img/portfolio1_2.jpg';
 import port1_3 from './assets/img/portfolio1_3.jpg';

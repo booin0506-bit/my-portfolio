@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowUpRight, Mail, Phone, MapPin, User, Heart, Coffee, Users, Target, MessageCircle, PenTool, Layout, Lightbulb, X, ArrowLeft, Image as ImageIcon } from 'lucide-react';
+
 import port1_1 from './assets/img/portfolio1_1.jpg';
 import port1_2 from './assets/img/portfolio1_2.jpg';
 import port1_3 from './assets/img/portfolio1_3.jpg';
@@ -30,8 +31,6 @@ import port4_3 from './assets/img/portfolio4_03.gif';
 import port4_4 from './assets/img/portfolio4_04.gif';
 
 import coverLetterImg from './assets/img/Cover_Letter1.png';
-
-
 
 // 스크롤 페이드인 애니메이션 컴포넌트 추가
 const FadeInOnScroll = ({ children, className = "", delay = 0 }) => {
@@ -215,9 +214,9 @@ const App = () => {
       category: 'UI/UX Design · Personal',
       description: '사용자의 일상 속 불편함을 해결하기 위해 새롭게 기획하고 구상 중인 모바일 앱 서비스 화면입니다.',
       tools: ['Figma', 'Protopie'],
-      imageUrl: port1_1,
+      imageUrl: port1_9,
       detailImages: [
-        port1_9, port1_1, port1_2, port1_3, port1_4, 
+        port1_1, port1_2, port1_3, port1_4, 
         port1_5, port1_6, port1_7, port1_8
       ],
       color: 'bg-purple-50'

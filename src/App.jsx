@@ -1,8 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowUpRight, Mail, Phone, MapPin, User, Heart, Coffee, Users, Target, MessageCircle, PenTool, Layout, Lightbulb, X, ArrowLeft, Image as ImageIcon } from 'lucide-react';
-
-
-
 import port1_1 from './assets/img/portfolio1_1.jpg';
 import port1_2 from './assets/img/portfolio1_2.jpg';
 import port1_3 from './assets/img/portfolio1_3.jpg';
@@ -33,6 +30,7 @@ import port4_3 from './assets/img/portfolio4_03.gif';
 import port4_4 from './assets/img/portfolio4_04.gif';
 
 import coverLetterImg from './assets/img/Cover_Letter1.png';
+
 
 
 // 스크롤 페이드인 애니메이션 컴포넌트 추가
@@ -219,8 +217,8 @@ const App = () => {
       tools: ['Figma', 'Protopie'],
       imageUrl: port1_1,
       detailImages: [
-        port1_1, port1_2, port1_3, port1_4, 
-        port1_5, port1_6, port1_7, port1_8, port1_9
+        port1_9, port1_1, port1_2, port1_3, port1_4, 
+        port1_5, port1_6, port1_7, port1_8
       ],
       color: 'bg-purple-50'
     },

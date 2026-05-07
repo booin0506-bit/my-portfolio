@@ -25,6 +25,7 @@ import port3_1 from './assets/img/portfolio3_01.jpg';
 import port3_2 from './assets/img/portfolio3_02.jpg';
 import port3_3 from './assets/img/portfolio3_03.jpg';
 
+import port4_thumb from './assets/img/portfolio4_thumnail.png';
 import port4_1 from './assets/img/portfolio4_01.jpg';
 import port4_2 from './assets/img/portfolio4_02.jpg';
 import port4_3 from './assets/img/portfolio4_03.gif';

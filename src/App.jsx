@@ -211,9 +211,9 @@ const App = () => {
   const projects = [
     {
       id: 1,
-      title: "개인 프로젝트 (추가 예정)",
+      title: "코레일톡 앱 리뉴얼",
       category: 'UI/UX Design · Personal',
-      description: '사용자의 일상 속 불편함을 해결하기 위해 새롭게 기획하고 구상 중인 모바일 앱 서비스 화면입니다.',
+      description: '코레일톡 앱의 문제를 정의하고 앱을 리뉴얼하였습니다',
       tools: ['Figma', 'Protopie'],
       imageUrl: port1_9,
       detailImages: [
@@ -243,7 +243,7 @@ const App = () => {
       description: '고객 참여를 유도하고 브랜드 가치를 전달하는 다양한 이벤트 및 프로모션 배너를 기획하고 디자인했습니다.',
       tools: ['Illustrator', 'Photoshop'],
       // ✅ portfolio4 데이터 적용 (썸네일이 따로 없어 01번 이미지를 썸네일로 사용했습니다)
-      imageUrl: port4_1,
+      imageUrl: port4_thumb,
       detailImages: [
         port4_1, port4_2, port4_3, port4_4
       ],

@@ -119,7 +119,7 @@ const CoverLetter = ({ onBack }) => {
                 </div>
                 {/* font-medium을 font-normal로 변경 */}
                 <p className="text-lg leading-relaxed text-gray-600 font-normal break-keep">
-                  "과정이 즐거워야 결과가 좋다"는 마음가짐으로 업무에 임합니다. 뛰어난 개인의 역량도 중요하지만, 무엇보다 팀워크를 중시하여 팀원들과 의견을 활발하게 교류하는 것을 즐깁니다. 업무 중 예상치 못한 문제가 발생하더라도 좌절하기보다는, 그 상황 안에서 프로젝트를 정상적으로 진행할 수 있는 최선의 방향을 찾기 위해 노력합니다. 혼자만의 생각에 갇히기보다 여러 사람과의 커뮤니케이션을 통해 가장 합리적인 결론을 도출하는 것을 업무의 기본 원칙으로 삼고 있습니다.
+                  "과정이 즐거워야 결과가 좋다"는 마음가짐으로 업무에 임합니다.뛰어난 개인의 역량도 중요하지만, 무엇보다 팀워크를 중시하여 팀원들과 의견을 활발하게 교류하는 것을 즐깁니다. 개인의 역량을 중요시하던 시기도 있었지만, 사회 생활을 하다 보니,그것은 개인을 위한 것이지 결국에 본질적으로 중요한 것은, 소통과정과 해결문제라는 것을 깨달았습니다. 업무 중 예상치 못한 문제가 발생하더라도 좌절하기 보다는, 그 상황 안에서 프로젝트를 정상적으로 진행할 수 있는 최선의 방향을 찾기 위해 노력합니다. 혼자만의 생각에 갇혀있기보다는 여러 사람과의 커뮤니케이션을 통해 가장 합리적인 결론을 도출하는 것을 업무의 기본 원칙으로 삼고 있습니다. 디자이너의 직업은 처음에는 자신의 역량으로 심미적인것을 표현하는 것으로 생각하였습니다. 하지만 그러한 작업보다는 “우리들이 생각하는 것, 생각만 하던 것을 표현”하는 것이 디자이너라는 것을 느꼈습니다. 남들보다 월등한 작업물보다는 우리들이 생각만하고 도출은 못하는 것들을 끄집어 낼 수 있는 디자이너가 되고 싶습니다
                 </p>
               </section>
             </FadeInOnScroll>
@@ -128,7 +128,7 @@ const CoverLetter = ({ onBack }) => {
               <section>
                 <div className="flex items-center gap-4 mb-6 border-b border-gray-100 pb-4">
                   <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center font-bold text-lg">02</div>
-                  <h2 className="text-2xl font-bold text-gray-800">강점과 단점</h2>
+                  <h2 className="text-2xl font-bold text-gray-800">단점 극복</h2>
                 </div>
                 <div className="w-full bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 flex flex-col items-center justify-center relative aspect-video mb-8 shadow-sm">
                   <img 
@@ -139,7 +139,7 @@ const CoverLetter = ({ onBack }) => {
                 </div>
                 {/* font-medium을 font-normal로 변경 */}
                 <p className="text-lg leading-relaxed text-gray-600 font-normal break-keep">
-                  저의 가장 큰 강점은 '사용자와 동료를 향한 배려' 그리고 '원활한 커뮤니케이션 능력'입니다. 디자인 결과물이 어떤 맥락에서 사용될지 꼼꼼히 분석하여 직관적인 경험을 설계합니다. 반면, [단점 입력: 예 - 너무 디테일에 집착하여 가끔 시간이 지체될 때가 있습니다.]라는 단점이 있습니다. 하지만 이를 극복하기 위해 [극복 노력 입력: 예 - 작업 전 명확한 타임라인을 설정하고 우선순위를 시각화하여 일정을 관리하는] 등 꾸준한 노력을 기울이고 있습니다.
+                  저에게는 현실적인 생각에 치중하거나, 하나에 너무 깊게 파고들어 시야가 좁아진다는 문제점이 있습니다. 허나 이러한 문제점을 인지하고, 현실 감각을 더 건설적으로 활용하며 작업의 방향성을 정확하게 설정하는 방법을 통하여, 더 나은 디자인을 고민하는 '미래지향성'과 탄탄한 '전문성'이라는 장점을 발견하고 발전시켰습니다. 또한, 팀을 위해 무조건 희생하거나 남의 의견을 비판 없이 수용하려는 문제점도 있습니다. 허나 이 역시 맹목적인 양보 대신 건강한 협업과 피드백 수용의 기준을 명확히 세우는 과정을 통하여, 팀원과 시너지를 내는 '협력성'과 흔들리지 않는 '주체성'이라는 장점을 발견하고 발전시켰습니다.
                 </p>
               </section>
             </FadeInOnScroll>
@@ -152,7 +152,7 @@ const CoverLetter = ({ onBack }) => {
                 </div>
                 {/* font-medium을 font-normal로 변경 */}
                 <p className="text-lg leading-relaxed text-gray-600 font-normal break-keep">
-                  귀사의 [회사의 비전이나 서비스 장점 입력]에 깊은 인상을 받아 지원하게 되었습니다. 밀키트 스타트업 '푸드어셈블'에서 2년 8개월간 웹/앱 디자인 리뉴얼을 주도하며 브랜드가 성장하는 과정을 함께했습니다. 이 과정에서 얻은 사용자에 대한 깊은 이해와 문제 해결 능력을 이제 귀사의 새로운 프로젝트와 서비스 개선에 쏟고 싶습니다.
+                  귀사의 서비스와 비전에 깊은 인상을 받아 지원하게 되었습니다. 밀키트 스타트업 '푸드어셈블'에서 2년 8개월간 웹/앱 디자인 리뉴얼을 주도하며 브랜드가 성장하는 과정을 함께했습니다. 이 과정에서 얻은 사용자에 대한 깊은 이해와 문제 해결 능력을 이제 귀사의 새로운 프로젝트와 서비스 개선에 쏟고 싶습니다.
                 </p>
               </section>
             </FadeInOnScroll>

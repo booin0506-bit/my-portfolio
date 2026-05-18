@@ -299,17 +299,15 @@ const App = () => {
           </nav>
         </div>
       </header>
-
+      
       <main className="max-w-6xl mx-auto px-6 pt-32">
         <section className="relative mt-8 md:mt-16 mb-32 animate-fade-in-up rounded-[2.5rem] overflow-hidden shadow-sm border border-gray-100">
-          <div className="absolute inset-0 z-0">
-            <img 
-              src="/assets/img/main_image.png" 
-              /* alt="heroBg" */ 
-              className="w-full h-full object-cover"
-            />
-            <div className="w-full h-full object-cover"></div>
-          </div>
+<div className="absolute inset-0 z-0">
+  <div 
+    className="w-full h-full bg-cover bg-center bg-no-repeat"
+    style={{ backgroundImage: `url(${heroBg})` }}
+  ></div>
+</div>
 
           <div className="relative z-10 px-6 py-16 md:px-12 md:py-24 lg:p-24">
             <div className="inline-block px-4 py-2 bg-blue-700 text-blue-50 rounded-full text-sm font-bold mb-6 shadow-sm">

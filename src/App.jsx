@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowUpRight, Mail, Phone, MapPin, User, Heart, Coffee, Users, Target, MessageCircle, PenTool, Layout, Lightbulb, X, ArrowLeft, Image as ImageIcon } from 'lucide-react';
 
+import heroBg from './assets/img/main_image.png';
+
 import port1_1 from './assets/img/portfolio1_1.jpg';
 import port1_2 from './assets/img/portfolio1_2.jpg';
 import port1_3 from './assets/img/portfolio1_3.jpg';
@@ -302,11 +304,11 @@ const App = () => {
         <section className="relative mt-8 md:mt-16 mb-32 animate-fade-in-up rounded-[2.5rem] overflow-hidden shadow-sm border border-gray-100">
           <div className="absolute inset-0 z-0">
             <img 
-              src="https://source.unsplash.com/kBzQNk9AgOg/2560x1440" 
+              src="/assets/img/main_image.png" 
               alt="Hero Background" 
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/20 backdrop-blur-[2px]"></div>
+            <div className="w-full h-full object-cover"></div>
           </div>
 
           <div className="relative z-10 px-6 py-16 md:px-12 md:py-24 lg:p-24">

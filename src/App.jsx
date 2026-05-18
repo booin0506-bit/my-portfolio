@@ -305,7 +305,7 @@ const App = () => {
           <div className="absolute inset-0 z-0">
             <img 
               src="/assets/img/main_image.png" 
-              alt="Hero Background" 
+              alt="heroBg" 
               className="w-full h-full object-cover"
             />
             <div className="w-full h-full object-cover"></div>
